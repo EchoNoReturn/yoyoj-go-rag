@@ -1,0 +1,48 @@
+server:
+  port: 8080
+  mode: production
+
+database:
+  postgres:
+    host: localhost
+    port: 5432
+    username: user
+    password: pass
+    database: rag_db
+    ssl: false
+    timeZone: Asia/Shanghai
+  
+  milvus:
+    host: localhost
+    port: 19530
+    database: rag_milvus
+
+cache:
+  redis:
+    host: localhost
+    port: 6379
+    password: ""
+    db: 0
+
+ai:
+  openai:
+    apiKey: "your-openai-api-key"
+    base_url: "https://api.openai.com/v1"
+  claude:
+    apiKey: "your-claude-api-key"
+    base_url: "https://api.anthropic.com/v1"
+
+email:
+  smtp:
+    host: smtp.example.com
+    port: 587
+    username: your-email@example.com
+    password: your-email-password
+
+storage:
+  s3:
+    endpoint: s3.example.com
+    accessKey: your-access-key
+    secretKey: your-secret-key
+    bucket: your-bucket-name
+    region: us-west-1
